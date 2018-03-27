@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Liste from './list'
 
 class Tableau extends Component {
 
-  render() {
+    render() {
 
-    return (
-      <div>
+        const { title, lists, cards } = this.props;
 
-          <Liste/>
-
-      </div>
-    );
-  }
+        return (
+            <div>
+                <h1> {title} </h1>
+                {lists.map((list, index) =>
+                    <Liste key={index} title={list.title} id={list.listId} cards={cards}/>)}
+            </div>
+        );
+    }
 }
 
-export default Tableau;
+const mapStateToProps = state => ({
+  lists: state.lists.datas,
+  cards: state.cards.datas
+});
+
+export default connect(mapStateToProps)(Tableau);

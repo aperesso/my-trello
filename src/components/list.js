@@ -4,37 +4,16 @@ import Card from './card'
 
 class Listes extends Component {
 
-  constructor() {
-    super();
-
-    this.myprops = {
-      card: [
-        {
-          content: 'Blablabla',
-          id: 1
-        },
-        {
-          content: 'uhuzehuhd',
-          id: 2
-        },
-        {
-          content: 'jefrebfhjberf',
-          id: 3
-        }
-      ]
-    }
-  }
-
   render() {
 
-    const cards = this.myprops.card;
-
-    console.log(cards);
+    const cards = this.props.cards;
 
     return (
-
       <div>
-        {cards.map(card => <Card key={card.id} content={card.content}/>)}
+		<h3> {this.props.title} </h3>
+        {cards.map((card, index) =>
+             card.columnId === this.props.id ?
+                <Card key={index} content={card.content}/> : null)}
       </div>
     );
   }
