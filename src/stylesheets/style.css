@@ -1,0 +1,72 @@
+html, body {
+  min-width: 100vW;
+  background: url("../flowers.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: $no-repeat;
+}
+
+h1 {
+  display: block!;
+  color: #fafafa;
+  text-align: center;
+  font-family: 'Seaweed Script', cursive;
+
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 20vH;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-bottom: 20vH;
+}
+
+.lists {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 40px 20px 40px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.lists h3 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 2px;
+}
+
+.lists input {
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: black;
+  padding: 20px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 2px;
+}
+
+.lists button {
+  margin-bottom: 20px;
+}
+
+.newcard input {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: black;
+  padding: 10px;
+}
+
+.newcard button {
+  background: rgba(0, 0, 0, 0.5);
+  border: black;
+  color: white;
+  padding: 10px;
+  margin-left: 1px;
+}
+
+input:focus {
+    outline:none;
+}
